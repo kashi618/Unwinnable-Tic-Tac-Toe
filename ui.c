@@ -7,6 +7,7 @@ void clear_screen(void) {
     fflush(stdout);
 }
 
+
 // Graphics
 void display_title(void) {
     printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
@@ -20,7 +21,67 @@ void display_title(void) {
     fflush(stdout);
 }
 
-void display_menu_options(void) {
+void display_menu_options(MenuChoice choice) {
+    switch (choice) {
+        case NONE:
+            printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░  Start (s)                            ░░\n");
+            printf("░░  About (a)                            ░░\n");
+            printf("░░  Quit  (q)                            ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                             by kashi  ░░\n");
+            printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
+            fflush(stdout);
+            break;
+        case START:
+            printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░  "MAGENTA"Start (s)"RESET"                            ░░\n");
+            printf("░░  About (a)                            ░░\n");
+            printf("░░  Quit  (q)                            ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                             by kashi  ░░\n");
+            printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
+            fflush(stdout);
+            break;
+        case ABOUT:
+            printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░  Start (s)                            ░░\n");
+            printf("░░  "MAGENTA"About (a)"RESET"                            ░░\n");
+            printf("░░  Quit  (q)                            ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                             by kashi  ░░\n");
+            printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
+            fflush(stdout);
+            break;        
+        case QUIT:
+            printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░  Start (s)                            ░░\n");
+            printf("░░  About (a)                            ░░\n");
+            printf("░░  "MAGENTA"Quit  (q)"RESET"                            ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                                       ░░\n");
+            printf("░░                             by kashi  ░░\n");
+            printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
+            fflush(stdout);
+            break;
+    }
+
+    /*
     printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
     printf("░░                                       ░░\n");
     printf("░░  Start (s)                            ░░\n");
@@ -33,4 +94,5 @@ void display_menu_options(void) {
     printf("░░                             by kashi  ░░\n");
     printf("░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n");
     fflush(stdout);
+    */
 }
