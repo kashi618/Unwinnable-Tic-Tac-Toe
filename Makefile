@@ -1,8 +1,8 @@
 main: main.c
-	gcc -o main.exe main.c
+	gcc main.c ui.c -o tictactoe.exe
 
 run: main
-	./main.exe
+	./tictactoe.exe
 
 clean:
-	rm -f main
+	rm -f tictactoe.exe
