@@ -9,18 +9,22 @@
 #define MAGENTA "\e[35m"
 #define WHITE   "\e[37m"
 
-// Menu Choice
+// Menu Options
 typedef enum{
-    NONE,
     START,
     ABOUT,
-    QUIT
-} MenuChoice;
+    CONFIG,
+    QUIT,
+    NUM_MENU_OPTIONS,
+    NO_CHOICE = -1 
+} MenuOption;
 
 // Functions
 void clear_screen(void);
 
+void set_raw_mode(int);
+
 void display_title(void);
-void display_menu_options(MenuChoice choice);
+void display_menu_options(MenuOption choice);
 
 #endif
