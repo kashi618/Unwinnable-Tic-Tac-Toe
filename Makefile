@@ -1,8 +1,23 @@
-main: main.c
-	gcc main.c ui.c -o tictactoe.exe
+# Compiler and flags
+CC = gcc
+CFLAGS = -Wall -Wextra -O2
 
-run: main
-	./tictactoe.exe
+TARGET = tictactoe.exe
 
+SRCS = main.c ui.c game_logic.c
+OBJS = $(SRC:.c=.o)
+
+# Compiling
+$(TARGET): $(SRCS)
+	$(CC) $(SRCS) -o $(TARGET) $(CFLAGS)
+
+# Run compiled file
+run: $(TARGET)
+	./$(TARGET)
+
+# Clean compiled files
 clean:
-	rm -f tictactoe.exe
+	rm -f $(TARGET)
+
+# Phony declarations
+.PHONY: run clean
