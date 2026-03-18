@@ -1,6 +1,8 @@
 #ifndef UI_H
 #define UI_H
 
+#include <stdlib.h>
+
 // ANSI escape codes
 #define CLEAR_SCREEN "\e[2J"
 
@@ -32,7 +34,12 @@ void clear_screen(void);
 
 void set_raw_mode(int);
 
+void draw_menu(MenuOption);
+
 void display_title(void);
-void display_menu_options(MenuOption choice);
+void display_menu_options(MenuOption);
+
+MenuOption navigate_menu_arrow_keys(MenuOption);
+void menu_selection(MenuOption);
 
 #endif
